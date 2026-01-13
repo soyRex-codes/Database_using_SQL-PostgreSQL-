@@ -1,0 +1,35 @@
+Rajkumar Kushwaha
+Hw11
+--entities (tables)
+
+1. Name one recursive relationship set.
+
+The "prereq" relationship set is a recursive relationship where a course can be a prerequisite for another course. This relationship is between
+the "course" entity set and itself.
+
+2. What does the double line that joins the entity set instructor with the relationship set inst_dep indicate?
+
+The double line indicates a total participation constraint, meaning all instructor are totally in some way have a relationship with department
+through the "inst_dep" relationship set. It can also be defined as, every instance of the entity set "instructor" must be associated with at
+least one instance of the "department" entity set through the "inst_dep" relationship set.
+
+3. What are the attributes of the relationship set teaches between the entity sets instructor and section?
+
+The attributes of the "teaches" relationship set between the "instructor" and "section" entity sets include:
+Semester
+Year
+eg: spring2024=Dr.smit teaches sec335
+    Fall2024  =Dr.smit teaches sec335 again
+in both the secenarios, only semester and year is the differentiator for instructor
+whereas sec is same and doesnot give a clear concept of distinct instructor.	
+
+4. Give a primary key for the relationship set advisor. Explain the reason behind your choice.
+
+A primary key for the "advisor" relationship set could be the combination of "student_id" and "instructor_id". This choice the best choice because 
+the primary key uniquely identifies the advisory relationship between a student and an instructor, ensuring that each student can have a unique
+advisor.
+
+5. What is the mapping cardinality of the relationship set course_dep between the entity sets course and department? Explain the meaning of that mapping cardinality.
+
+The mapping cardinality of the "course_dep" relationship set between the "course" and "department" entity sets is many-to-one (N:1). This means
+that each course is offered by only one department, but each department can offer multiple courses.
